@@ -1,6 +1,6 @@
 const Question = require('../models/question');
 
-exports.questions_list = (req, res, next) => {
+exports.questions_list = (req, res) => {
   Question.findAll({
     limit: 50
   })
@@ -19,7 +19,7 @@ exports.questions_list = (req, res, next) => {
     });
 };
 
-exports.create_question = (req, res, next) => {
+exports.create_question = (req, res) => {
   const question = new Question({
     title: req.body.title,
     text: req.body.text,

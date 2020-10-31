@@ -4,9 +4,12 @@ const config = require('../config');
 module.exports = (req, res, next) => {
   try {
     let token = req.headers.authorization;
-    if (token) token = token.split(' ');
-    const decoded = jwt.verify(token[1], config.JWT_KEY);
-    req.userData = decoded;
+
+    if (token) {
+      token = token.split(' ');
+    }
+
+    req.userData = jwt.verify(token[1], config.JWT_KEY);
     next();
   }
   catch (error) {

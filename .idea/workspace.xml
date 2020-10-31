@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a588cd68-62a0-4590-911b-f1e7e787dbc9" name="Default Changelist" comment="added basic functions">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a588cd68-62a0-4590-911b-f1e7e787dbc9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/question.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middleware/check-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/check-auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tools/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/db.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,8 +86,16 @@
       <workItem from="1600377152522" duration="3000" />
       <workItem from="1601549304698" duration="4154000" />
       <workItem from="1601631078929" duration="2526000" />
-      <workItem from="1604155142346" duration="311000" />
+      <workItem from="1604155142346" duration="2027000" />
     </task>
+    <task id="LOCAL-00001" summary="added basic functions">
+      <created>1604155461869</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604155461869</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,10 +106,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="added basic functions" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="358" y="78" key="#ESLint" timestamp="1599772399099">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="537" y="119" key="#ESLint" timestamp="1604155667751">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="358" y="78" key="#ESLint/0.0.1280.680@0.0.1280.680" timestamp="1599772399099" />
+    <state x="537" y="119" key="#ESLint/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1604155667751" />
     <state x="413" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598802412599">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -116,30 +119,42 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1598779463825" />
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1604155460165">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="88" key="CommitChangelistDialog2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1604155460165" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1598776341793">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598776341793" />
-    <state width="1259" height="147" key="GridCell.Tab.0.bottom" timestamp="1599773324465">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1899" height="255" key="GridCell.Tab.0.bottom" timestamp="1604156481798">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="147" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1599773324465" />
-    <state width="1259" height="147" key="GridCell.Tab.0.center" timestamp="1599773324465">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1899" height="255" key="GridCell.Tab.0.bottom/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1604156481798" />
+    <state width="1899" height="255" key="GridCell.Tab.0.center" timestamp="1604156481797">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="147" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1599773324465" />
-    <state width="1259" height="147" key="GridCell.Tab.0.left" timestamp="1599773324465">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1899" height="255" key="GridCell.Tab.0.center/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1604156481797" />
+    <state width="1899" height="255" key="GridCell.Tab.0.left" timestamp="1604156481797">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="147" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1599773324465" />
-    <state width="1259" height="147" key="GridCell.Tab.0.right" timestamp="1599773324465">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1899" height="255" key="GridCell.Tab.0.left/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1604156481797" />
+    <state width="1899" height="255" key="GridCell.Tab.0.right" timestamp="1604156481798">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="147" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1599773324465" />
+    <state width="1899" height="255" key="GridCell.Tab.0.right/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1604156481798" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1599773071738">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1599773071738" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604155465765">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1604155465765" />
     <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598778314145">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

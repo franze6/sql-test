@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const config = require('../config');
 
-exports.user_signup = (req, res, next) => {
+exports.user_signup = (req, res) => {
   User.findAll({
     where: {
       login: req.body.login
@@ -33,7 +33,8 @@ exports.user_signup = (req, res, next) => {
           .save()
           .then((result) => {
             res.status(201).json({
-              message: 'User created'
+              message: 'User created',
+              result
             });
           })
           .catch((err) => {
@@ -48,7 +49,7 @@ exports.user_signup = (req, res, next) => {
     });
 };
 
-exports.user_login = (req, res, next) => {
+exports.user_login = (req, res) => {
   User.findOne({
     where: {
       login: req.body.login
