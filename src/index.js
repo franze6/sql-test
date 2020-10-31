@@ -9,7 +9,7 @@ const config = require('./config');
 
 const app = express();
 
-db.sync()
+db.sync({ alter: true })
   .then(() => {
     app.listen(config.PORT, () => {
       console.log(`Сервер запущен на порту ${config.PORT}...`);
