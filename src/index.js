@@ -20,6 +20,16 @@ db.sync()
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
+app.use((err, req, res, next) => {
+  if (err) {
+    console.error(err.stack);
+    res.status(500)
+      .json({
+        message: 'Что-то пошло не так!'
+      });
+  }
+});
+
 app.use('/users', usersRouter);
 app.use('/questions', questionsRouter);
 

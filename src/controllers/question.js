@@ -5,7 +5,9 @@ exports.questions_list = (req, res) => {
     limit: 50
   })
     .then((result) => {
-      if (result.length > 0) res.status(200).json(result);
+      if (result.length > 0) {
+        res.status(200).json(result);
+      }
       else {
         res.status(404).json({
           message: 'No questions'

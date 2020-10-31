@@ -2,59 +2,40 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const config = require('../config');
+const Role = require('../models/role');
+const Permission = require('../models/permission');
 
 exports.user_signup = (req, res) => {
-  User.findAll({
-    where: {
-      login: req.body.login
-    }
-  })
-    .then((user) => {
-      if (user.length >= 1) {
-        res.status(409).json({
-          message: 'Login exists'
-        });
-        return;
-      }
-
-      bcrypt.hash(req.body.password, 10, (err, hash) => {
-        if (err) {
-          res.status(500).json({
-            error: err
-          });
-          return;
-        }
-        const user = new User({
-          login: req.body.login,
-          email: req.body.email,
-          password: hash
-        });
-        user
-          .save()
-          .then((result) => {
-            res.status(201).json({
-              message: 'User created',
-              result
-            });
-          })
-          .catch((err) => {
-            res.status(500).json({
-              error: err
-            });
-          });
+  bcrypt.hash(req.body.password, 10, (err, hash) => {
+    if (err) {
+      res.status(500).json({
+        error: err
       });
-    })
-    .catch((err) => {
-      console.log(err);
+      return;
+    }
+    const user = new User({
+      login: req.body.login,
+      email: req.body.email,
+      password: hash
     });
+    user
+      .save()
+      .then((result) => {
+        res.status(201).json({
+          message: 'User created',
+          result
+        });
+      })
+      .catch((err) => {
+        res.status(500).json({
+          error: err
+        });
+      });
+  });
 };
 
-exports.user_login = (req, res) => {
-  User.findOne({
-    where: {
-      login: req.body.login
-    }
-  })
+exports.user_signin = (req, res) => {
+  User.findUserByLogin(req.body.login, Role)
     .then((user) => {
       if (!user) {
         res.status(401).json({
@@ -77,7 +58,7 @@ exports.user_login = (req, res) => {
             },
             config.JWT_KEY,
             {
-              expiresIn: '1h'
+              expiresIn: '1y'
             }
           );
           console.log(jwt.verify(token, config.JWT_KEY));

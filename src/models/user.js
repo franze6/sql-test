@@ -6,23 +6,33 @@ const user = db.define('user', {
     allowNull: false,
     autoIncrement: true,
     primaryKey: true,
-    type: Sequelize.DataTypes.INTEGER
+    type: Sequelize.INTEGER
   },
   login: {
-    type: Sequelize.DataTypes.STRING,
+    type: Sequelize.STRING,
     allowNull: false
   },
   email: {
-    type: Sequelize.DataTypes.STRING,
-    allowNull: false,
-    isEmail: true
+    type: Sequelize.STRING,
+    allowNull: true,
+    isEmail: true,
+    default: null
   },
   password: {
-    type: Sequelize.DataTypes.STRING,
+    type: Sequelize.STRING,
     allowNull: false
   }
 }, {
   timestamps: true
 });
+
+user.findUserByLogin = (login, include) => {
+  return user.findOne({
+    where: {
+      login
+    },
+    include
+  });
+};
 
 module.exports = user;
