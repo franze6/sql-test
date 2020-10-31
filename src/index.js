@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const { exec } = require('child_process');
 const usersRouter = require('./routes/users');
 const questionsRouter = require('./routes/questions');
 const db = require('./tools/db');
@@ -28,3 +29,13 @@ app.get('/', (req, res) => {
     message: 'It works!'
   });
 });
+
+app.get('/pull', ((req, res) => {
+  exec('git pull', ((error, stdout) => {
+    console.log(stdout);
+  }));
+  res.status(200);
+  res.send({
+    message: 'Git pulled'
+  });
+}));
