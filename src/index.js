@@ -26,7 +26,7 @@ app.use('/questions', questionsRouter);
 app.get('/', (req, res) => {
   res.status(200);
   res.send({
-    message: 'It works!'
+    message: 'It works'
   });
 });
 
