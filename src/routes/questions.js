@@ -3,8 +3,8 @@ const questionController = require('../controllers/question');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('questions works!');
-});
+router.get('/', questionController.questions_list);
+
+router.post('/create', questionController.create_question);
 
 module.exports = router;

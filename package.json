@@ -50,7 +50,9 @@
       ],
       "one-var": [
         "off"
-      ]
+      ],
+      "no-shadow": "off",
+      "no-console": "off"
     }
   }
 }

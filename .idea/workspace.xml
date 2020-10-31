@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a588cd68-62a0-4590-911b-f1e7e787dbc9" name="Default Changelist" comment="">
+    <list default="true" id="a588cd68-62a0-4590-911b-f1e7e787dbc9" name="Default Changelist" comment="added basic functions">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/question.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/check-auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/question.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/questions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tools/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/check-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/check-auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/db.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +47,8 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.12.54" />
-    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.13.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.57" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -59,7 +58,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -89,13 +88,26 @@
       <updated>1598773198765</updated>
       <workItem from="1598773200251" duration="966000" />
       <workItem from="1598774203245" duration="11214000" />
+      <workItem from="1599772247839" duration="2277000" />
+      <workItem from="1600377152522" duration="3000" />
+      <workItem from="1601549304698" duration="4154000" />
+      <workItem from="1601631078929" duration="2526000" />
+      <workItem from="1604155142346" duration="311000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added basic functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added basic functions" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="358" y="78" key="#ESLint" timestamp="1599772399099">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="358" y="78" key="#ESLint/0.0.1280.680@0.0.1280.680" timestamp="1599772399099" />
     <state x="413" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598802412599">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -108,26 +120,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598776341793" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1598834176490">
+    <state width="1259" height="147" key="GridCell.Tab.0.bottom" timestamp="1599773324465">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598834176490" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1598834176489">
+    <state width="1259" height="147" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1599773324465" />
+    <state width="1259" height="147" key="GridCell.Tab.0.center" timestamp="1599773324465">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598834176489" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1598834176487">
+    <state width="1259" height="147" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1599773324465" />
+    <state width="1259" height="147" key="GridCell.Tab.0.left" timestamp="1599773324465">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598834176487" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1598834176490">
+    <state width="1259" height="147" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1599773324465" />
+    <state width="1259" height="147" key="GridCell.Tab.0.right" timestamp="1599773324465">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598834176490" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1598774866880">
+    <state width="1259" height="147" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1599773324465" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1599773071738">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1598774866880" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1599773071738" />
     <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598778314145">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
