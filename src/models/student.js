@@ -1,23 +1,19 @@
 const Sequelize = require('sequelize');
 const db = require('../tools/db');
-const User = require('./user');
 
-const role = db.define('role', {
+const student = db.define('student', {
   id: {
     allowNull: false,
     autoIncrement: true,
     primaryKey: true,
     type: Sequelize.INTEGER
   },
-  name: {
+  student_card_number: {
     allowNull: false,
-    type: Sequelize.STRING
+    type: Sequelize.INTEGER
   }
 }, {
   timestamps: true
 });
 
-role.hasMany(User);
-User.belongsTo(role);
-
-module.exports = role;
+module.exports = student;

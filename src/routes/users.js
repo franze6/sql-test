@@ -7,11 +7,12 @@ const checkAuth = require('../middleware/check-auth');
 
 const router = express.Router();
 
-router.get('/', checkAuth, (req, res) => {
-  res.send('users works!');
-});
-
 router.post('/auth', validateRules.signInRules(), validator, userController.user_signin);
-router.post('/create', validateRules.signUpRules(), validator, userController.user_signup);
+router.post('/', validateRules.signUpRules(), validator, userController.user_signup);
+
+router.get('/', checkAuth, userController.user_get);
+router.get('/list', checkAuth, userController.user_list);
+
+router.put('/setRole', checkAuth, validateRules.setRoleRules(), validator, userController.user_setRole);
 
 module.exports = router;

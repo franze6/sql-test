@@ -1,5 +1,8 @@
 const Sequelize = require('sequelize');
 const db = require('../tools/db');
+const Teacher = require('./teacher');
+const Student = require('./student');
+const Group = require('./group');
 
 const user = db.define('user', {
   id: {
@@ -34,5 +37,15 @@ user.findUserByLogin = (login, include) => {
     include
   });
 };
+
+user.hasOne(Teacher);
+Teacher.belongsTo(user, {
+  require: true
+});
+
+user.hasOne(Student);
+Student.belongsTo(user, {
+  require: true
+});
 
 module.exports = user;

@@ -1,17 +1,19 @@
 const Sequelize = require('sequelize');
 const db = require('../tools/db');
 
-const permission = db.define('permission', {
+const teacher = db.define('teacher', {
   id: {
     allowNull: false,
     autoIncrement: true,
     primaryKey: true,
     type: Sequelize.INTEGER
   },
-  name: {
+  work_phone: {
     allowNull: false,
     type: Sequelize.STRING
   }
+}, {
+  timestamps: true
 });
 
-module.exports = permission;
+module.exports = teacher;
