@@ -1,18 +1,16 @@
 const express = require('express');
-const userController = require('../controllers/user');
+const UserController = require('../controllers/user');
 
 const validator = require('../middleware/validator');
-const validateRules = require('../validations/user');
+const UserValidation = require('../validations/user');
 const checkAuth = require('../middleware/check-auth');
+const curdRoute = require('./curd_route');
 
-const router = express.Router();
+const router = curdRoute(UserController, UserValidation, true);
 
-router.post('/auth', validateRules.signInRules(), validator, userController.user_signin);
-router.post('/', validateRules.signUpRules(), validator, userController.user_signup);
+router.post('/signin', UserValidation.signIn(), validator, (req, res) => UserController.signIn(req, res));
+router.post('/signup', UserValidation.signUp(), validator, (req, res) => UserController.signUp(req, res));
 
-router.get('/', checkAuth, userController.user_get);
-router.get('/list', checkAuth, userController.user_list);
-
-router.put('/setRole', checkAuth, validateRules.setRoleRules(), validator, userController.user_setRole);
+router.put('/setRole', checkAuth, UserValidation.setRole(), validator, (req, res) => UserController.setRole(req, res));
 
 module.exports = router;
