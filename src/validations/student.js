@@ -1,8 +1,8 @@
 const { body, param } = require('express-validator');
 const User = require('../models/user');
-const CurdValidation = require('./curd_validation');
+const CrudValidation = require('./crud_validation');
 
-class StudentRules extends CurdValidation {
+class StudentRules extends CrudValidation {
   create() {
     return [
       body('student_card_number').trim().notEmpty().isInt(),

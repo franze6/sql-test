@@ -1,4 +1,4 @@
-class CurdController {
+class CrudController {
   constructor(Model) {
     this.Model = Model;
   }
@@ -83,4 +83,4 @@ class CurdController {
   }
 }
 
-module.exports = CurdController;
+module.exports = CrudController;

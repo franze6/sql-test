@@ -1,6 +1,6 @@
 const { param } = require('express-validator');
 
-class CurdValidation {
+class CrudValidation {
   static create() {
     return [];
   }
@@ -28,4 +28,4 @@ class CurdValidation {
   }
 }
 
-module.exports = CurdValidation;
+module.exports = CrudValidation;

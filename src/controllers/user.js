@@ -3,9 +3,9 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const config = require('../config');
 const Role = require('../models/role');
-const CurdController = require('./curd_controller');
+const CrudController = require('./crud_controller');
 
-class UserController extends CurdController {
+class UserController extends CrudController {
   async signUp(req, res) {
     await this.create(req, res);
   }

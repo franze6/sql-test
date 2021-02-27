@@ -1,5 +1,5 @@
 const Student = require('../models/student');
 const User = require('../models/user');
-const CurdController = require('./curd_controller');
+const CrudController = require('./crud_controller');
 
-module.exports = new CurdController(Student);
+module.exports = new CrudController(Student);

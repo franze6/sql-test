@@ -1,5 +1,5 @@
 const TeacherController = require('../controllers/teacher');
 const teacherValidation = require('../validations/teacher');
-const curdRoute = require('./curd_route');
+const crudRoute = require('./crud_route');
 
-module.exports = curdRoute(TeacherController, teacherValidation, true);
+module.exports = crudRoute(TeacherController, teacherValidation, true);

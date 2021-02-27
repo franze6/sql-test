@@ -2,9 +2,9 @@ const bcrypt = require('bcrypt');
 const { body, param } = require('express-validator');
 const Role = require('../models/role');
 const User = require('../models/user');
-const CurdValidation = require('./curd_validation');
+const CrudValidation = require('./crud_validation');
 
-class UserValidation extends CurdValidation {
+class UserValidation extends CrudValidation {
   static create() {
     return [
       body('data.login').trim().notEmpty()
