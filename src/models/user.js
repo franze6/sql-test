@@ -2,7 +2,6 @@ const Sequelize = require('sequelize');
 const db = require('../tools/db');
 const Teacher = require('./teacher');
 const Student = require('./student');
-const Group = require('./group');
 
 const user = db.define('user', {
   id: {
