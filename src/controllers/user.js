@@ -48,11 +48,11 @@ class UserController extends CrudController {
     }
   }
 
-  async get(req, res, include) {
+  async get(req, res) {
     await super.get(req, res, Role);
   }
 
-  async list(req, res, include) {
+  async list(req, res) {
     await super.list(req, res, Role);
   }
 

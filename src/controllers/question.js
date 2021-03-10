@@ -22,10 +22,10 @@ exports.questions_list = (req, res) => {
 };
 
 exports.create_question = (req, res) => {
+  const { body } = req;
+  const questionModel = global.questionTypes[body.type];
   const question = new Question({
-    title: req.body.title,
-    text: req.body.text,
-    right_answer: req.body.right_answer
+    type: body.type
   });
   question
     .save()

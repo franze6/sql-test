@@ -2,15 +2,13 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const { exec } = require('child_process');
-const usersRouter = require('./routes/users');
-const systemRouter = require('./routes/system');
-const questionsRouter = require('./routes/questions');
-const studentsRouter = require('./routes/students');
-const teachersRouter = require('./routes/teachers');
-const db = require('./tools/db');
-const config = require('./config');
 
 const app = express();
+global.app = app;
+
+require('./routes');
+const db = require('./tools/db');
+const config = require('./config');
 
 db.sync({ alter: true })
   .then(() => {
@@ -32,12 +30,6 @@ app.use((err, req, res, next) => {
       });
   }
 });
-
-app.use('/users', usersRouter);
-app.use('/questions', questionsRouter);
-app.use('/system', systemRouter);
-app.use('/students', studentsRouter);
-app.use('/teachers', teachersRouter);
 
 app.get('/', (req, res) => {
   res.status(200);

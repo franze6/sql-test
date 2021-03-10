@@ -3,8 +3,8 @@ const Question = require('../models/question');
 
 exports.createRules = () => {
   return [
-    body('title').trim().notEmpty().escape(),
-    body('text').trim().notEmpty().escape(),
-    body('right_answer').trim().notEmpty().escape()
+    // TODO: add check with questionTypes
+    body('type').trim().notEmpty().escape(),
+    body('data').trim().notEmpty().isJSON()
   ];
 };

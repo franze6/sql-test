@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../tools/db');
 
-const question = db.define('question', {
+const asset = db.define('asset', {
   id: {
     allowNull: false,
     autoIncrement: true,
@@ -9,11 +9,15 @@ const question = db.define('question', {
     type: Sequelize.INTEGER
   },
   type: {
-    type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    type: Sequelize.STRING
+  },
+  path: {
+    allowNull: false,
+    type: Sequelize.STRING
   }
 }, {
   timestamps: true
 });
 
-module.exports = question;
+module.exports = asset;
